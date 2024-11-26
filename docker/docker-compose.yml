@@ -1,0 +1,39 @@
+version: '3'
+services:
+  <give a name to your service>:
+    image: <give image> # if you already have the image 
+    build: <specify the Dockerfile directory> # if you have Dockerfile in your directory (./script)
+    container_name: <give container>
+    command: <give the shell command to execute the script if you have>
+    envionment: 
+      - <give the name1>=<give the value1>
+      - <give the name2>=<give the value2>
+      - <give the name3>=<give the value3>
+      - <give the name4>=<give the value4>
+      ...
+    ports:
+      - <give the host port1>:<give the container port1>
+      - <give the host port2>:<give the container port2>
+      ...
+    volumes:
+      - <volume name1>:<give the container volume1 path>
+      - <volume name2>:<give the container volume2 path>
+      ...
+    networks:
+      - <give the name of network1>
+      - <give the name of network2>
+      ...
+    restart: always
+    depends_on:
+      - <give the name of service1 that will be started before>
+      - <give the name of service2 that will be started before>
+
+volumes: # this line must be here if you want to create the volumes
+  <volume name1>:
+  <volume name2>:
+  ...:
+networks:
+
+
+
+    
